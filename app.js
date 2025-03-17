@@ -1,6 +1,7 @@
 // El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
 
 let amigos = [];
+let numeroDeAmigos
 
 
 function agregarAmigo() {
@@ -16,32 +17,28 @@ function agregarAmigo() {
         }
         amigos.push(agregarAmigo);
         console.log (amigos);
-        amigos.forEach(agregarAmigo => {
-            console.log(agregarAmigo);
-        })
-       // agregarNombreALista('#listaAmigos', `${amigos}`) //esta linea está ligada a la funcion en agregarNombreALista
-
-        limpiarCaja();
+        agregarNombreALista('#listaAmigos', `${amigos}`)
+    limpiarCaja();
 }
 
-/*function agregarNombreALista(elemento,nombre) {
-    let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = nombre;
-}*/
 
-function limpiarCaja() {
-    document.querySelector('#amigo').value = '';
-}
-
-//listaAmigos //nombre del id de la lista en html
-
-
-//AQUI ESTOY PROBANDO OTRA FUNCION PARA AGREGAR A UNA LISTA
-/*function actualizarLista() {
-    const lista = document.getElementById("listaAmigos");
+function agregarNombreALista() {
+    const lista = document.getElementById('listaAmigos');
     lista.innerHTML = "";
     
     for (let i = 0; i < amigos.length; i++) {
         lista.innerHTML += `<li>${amigos[i]}</li>`;
     }
-} */
+}
+
+
+function sortearAmigo() {
+    let amigoSorteado = Math.floor(Math.random()*amigos.length)
+    let nombreAmigo = amigos[amigoSorteado]
+    document.getElementById('resultado').innerHTML = `Parece que esta vez ${nombreAmigo} tuvo suerte`;
+   
+}
+
+function limpiarCaja() {
+    document.querySelector('#amigo').value = '';
+}
