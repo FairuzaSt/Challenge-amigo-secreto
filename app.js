@@ -35,7 +35,7 @@ function agregarNombreALista() {
 function sortearAmigo() {
     let amigoSorteado = Math.floor(Math.random()*amigos.length)
     let nombreAmigo = amigos[amigoSorteado]
-    document.getElementById('resultado').innerHTML = `Parece que esta vez ${nombreAmigo} tuvo suerte`;
+    document.getElementById('resultado').innerHTML = `Parece que esta vez ${nombreAmigo} es tu amigo secreto`;
    
 }
 
