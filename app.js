@@ -6,7 +6,7 @@ let numeroDeAmigos
 
 function agregarAmigo() {
     let agregarAmigo = document.querySelector('#amigo').value;
-    console.log(agregarAmigo);
+    //console.log(agregarAmigo);
     if (agregarAmigo === '') {
         alert ('Por favor agrega el nombre de un amigo');
         return agregarAmigo();
@@ -16,7 +16,7 @@ function agregarAmigo() {
         return agregarAmigo();
         }
         amigos.push(agregarAmigo);
-        console.log (amigos);
+        //console.log (amigos);
         agregarNombreALista('#listaAmigos', `${amigos}`)
     limpiarCaja();
 }
